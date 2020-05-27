@@ -1,0 +1,12 @@
+﻿@model Aula03_MVC.Models.Domain.Pessoa
+@{
+    ViewData["Title"] = "Obrigado";
+}
+
+<img src="~/Joinha.png" class="img-thumbnail"/>
+
+<h5 class="align-content-center">@ViewData["Title"] @Model.Name por sua Opnião !!!</h5>
+
+<input type="button" value="Retornar" class="btn btn-outline-dark" onclick="location.href='@Url.Action("index", "Home")'" />
+
+<hr />

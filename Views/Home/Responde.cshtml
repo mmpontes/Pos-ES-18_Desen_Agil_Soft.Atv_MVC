@@ -1,0 +1,50 @@
+﻿@model Aula03_MVC.Models.Domain.Pessoa
+@{
+    ViewData["Title"] = "Opinião";
+}
+
+    <img src="~/em-construcao.jpg" />
+
+    <h1>Sua @ViewData["Title"] é muito importante para nós!</h1>
+
+    <h5>Obrigado por disponibilizar esses minutos para nos enviar sua opnião.</h5>
+<hr />
+
+<form asp-area="" asp-controller="Home" asp-action="Salva" method="post" role="form">
+    <div class="form-row">
+        <div class="form-group col-md-9">
+            <label for="inpuNome">Nome</label>
+            <input type="text" name="Name" asp-for="Name" class="form-control" id="inpuNome" placeholder="Nome">
+            <small><span class="badge text-danger" asp-validation-for="Name"></span></small>
+        </div>
+        <div class="form-group col-md-3">
+            <label for="inputidade">Idade</label>
+            <input type="number" name="Age" asp-for="Age" class="form-control" id="inputidade" placeholder="30">
+            <small><span class="badge text-danger" asp-validation-for="Age"></span></small>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-10">
+            <label for="inputEmail">Email</label>
+            <input type="email" name="Email" asp-for="Email" class="form-control" id="inputEmail" placeholder="name@example.com">
+            <small><span class="badge text-danger" asp-validation-for="Email"></span></small>
+        </div>
+        <div class="form-group col-md-2">
+            <label for="inputSexo">Sexo</label>
+            <select class="form-control" name="Sexo" asp-for="Sexo" id="inputSexo">
+                <option>Masculino</option>
+                <option>Feminino</option>
+            </select>
+            <small><span class="badge text-danger" asp-validation-for="Sexo"></span></small>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-12">
+            <label for="opniaoText">Opnião</label>
+            <textarea class="form-control" name="Opniao" asp-for="Opniao" id="opniaoText" rows="4"></textarea>
+            <small><span class="badge text-danger" asp-validation-for="Opniao"></span></small>
+        </div>
+    </div>
+        <button type="submit">Enviar</button>
+</form>
